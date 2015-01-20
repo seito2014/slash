@@ -1,0 +1,79 @@
+/*
+#overview
+slash
+
+*/
+.slash {
+    overflow: hidden;
+    padding-top: 50px;
+    &.is_hidden {
+        opacity: 0;
+    }
+    .slash_inner {
+        width: 655px;
+        height: 437px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+    .slash_img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        &.slash_wrap {
+            z-index: 3;
+        }
+        &.up {
+            z-index: 2;
+        }
+        &.down {
+            z-index: 1;
+        }
+    }
+}
+
+//アニメーションのスタイル
+
+//.is_animatingクラスが付いたらアニメーション作動
+
+// // 斬れるアニメーション
+// .slash_img_inner {
+//     &.is_animating{
+//         animation: slashSord 0.25s ease-out both;
+//     }
+// }
+// .slash{
+//     &.is_animating {
+//         .up {
+//             animation: slashUp1 2s ease both;
+//         }
+//         .down {
+//             animation: zuba2 2s ease both;
+//         }
+//     }
+// }
+// .slash_wrap {
+//     &.is_animating {
+//         animation: slashUp1 2s 2s ease both;
+//     }
+// }
+
+
+// 斬れ目アニメーション
+.slash_img_inner {
+    &.is_animating{
+        animation: slashSord 0.25s ease-out both;
+    }
+}
+
+// 上半分スライドするアニメーション
+.slash{
+    &.is_animating {
+        .slash_wrap,
+        .up {
+            animation: slashUp 2s ease both;
+        }
+    }
+}

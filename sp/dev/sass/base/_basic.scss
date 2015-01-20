@@ -1,92 +1,17 @@
-.common_module {
-  width: 100%;
-  max-width: $size-max;
-}
-
 *{
 	box-sizing: border-box;
 }
 html{
 	font-size: 62.5%;
   min-height: 100%;
-  background: url(#{$path-images}bg_paper_pc.png) center top repeat-y;
-  @include small{
-    background: url(#{$path-images}bg_paper.png) top center;
-    background-size: 145px 77px;
-  }
+  background: url('../images/bg_paper_pc.png') center top repeat-y;
 }
 body {
-	color: $color_default;
-	@include rem(14);
+	font-size: 14px;
 	line-height: 1;
-	@extend %font_main;
-  &.animal {
-    .wrapper {
-      background: url(#{$path-images}bg_animal2.png) -58px 145px;
-      background-size: 400px 200px;
-    }
-  }
-  &.sengoku {
-    .wrapper {
-      background: url(#{$path-images}bg_sengoku2.png) 19px 93px;
-      background-size: 350px 200px;
-    }
-  }
 }
 .wrapper{
-  @extend .common_module;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-a {
-	text-decoration: none;
-	color: $color_default;
-	outline: none;
-	text-decoration: none;
-	tap-highlight-color:#000;
-}
-::selection {
-	background: #fff;
-	color: #484955;
-}
-
-.container {
-  @extend .common_module;
-  margin: 0 auto;
-  padding: 0 15px;
-  @extend %clearfix;
-  position: relative;
-}
-
-.contents {
   width: 100%;
-  @extend %clearfix;
-  background-size: 145px 77px;
-}
-
-.contents_container{
-  max-width: $size-max;
-  margin-right: auto;
-  margin-left: auto;
-  @extend %clearfix;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.main {
-  @extend .common_module;
-  min-height: 300px;
-  position: relative;
-}
-
-.for_old {
-  display: none;
-  .lt-ie9 & {
-    display: block;
-  }
-}
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
+  max-width: 980px;
+  margin: 0 auto; 
 }

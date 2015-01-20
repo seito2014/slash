@@ -4,10 +4,6 @@
 	position: absolute;
 }
 
-%ib{
-	@include inline-block;
-}
-
 %blow{
 	overflow: hidden;
 	text-indent: 120%;

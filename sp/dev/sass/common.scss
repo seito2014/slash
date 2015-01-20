@@ -2,17 +2,13 @@
 * base
 */
 @import "base/setting";
-@import "base/setting_color";
 @import "base/default/mixin";
 @import "base/default/define";
 @import "base/default/reset";
 @import "base/util";
-@import "base/original_mixin";
-@import "base/original_define";
 @import "base/basic";
 @import "base/animation";
 /*
 * module
 */
-@import "module/load";
-@import "module/curtain";
+@import "slash";
