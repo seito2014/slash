@@ -1,0 +1,8 @@
+# .sass-cache フォルダまるごと無視したい
+.idea
+sp/.sass-cache/
+sp/node_modules
+sp/style_guide
+wp/wp-contents/uploads
+.htaccess
+.htpasswd

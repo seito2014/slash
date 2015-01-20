@@ -1,0 +1,32 @@
+/*
+* 変数用scss(カラーコード以外)
+*/
+
+// path
+$path-images:"../images/";
+$path-fonts:"../fonts/";
+
+// clum width
+$gutter: 0;
+$size-max: 980px;
+$size-min: 320px;
+
+// speed
+$speed-normal:0.35s;
+$speed-quick:0.25s;
+$speed-late:0.75s;
+
+// opacity
+$opacity:0.7;
+
+// scale (sprite生成で使用)
+$default-scale:1;
+
+// font
+%font_main{
+  font-family: "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", 'メイリオ' , Meiryo , Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+%font_arial{
+  font-family: arial, sans-serif;
+}

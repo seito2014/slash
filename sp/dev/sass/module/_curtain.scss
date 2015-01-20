@@ -1,0 +1,66 @@
+/*
+#overview
+slash
+
+*/
+.slash {
+    overflow: hidden;
+    background: #fff;
+    transition: opacity 1s ease;
+    padding-top: 50px;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transition: opacity 1s;
+    z-index: 2;
+    &.is_hidden {
+        opacity: 0;
+    }
+    .slash_inner {
+        width: 655px;
+        height: 437px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+    .slash_bg {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &.slash_wrap {
+            z-index: 5;
+        }
+        &.up {
+            z-index: 4;
+        }
+        &.down {
+            z-index: 3;
+        }
+    }
+}
+
+//アニメーションのスタイル
+.slash{
+    &.is_animating {
+        .slash_wrap {
+            animation: zuba1 2s ease both;
+        }
+        .up {
+            animation: zuba1 2s ease both;
+        }
+        .down {
+            animation: zuba2 2s ease both;
+        }
+    }
+}
+
+.slash_wrap {
+    &.is_animating {
+        animation: zuba1 2s 2s ease both;
+    }
+}
+.slash_bg_inner {
+    &.is_animating{
+        animation: pika 0.25s ease-out both;
+    }
+}

@@ -1,0 +1,42 @@
+@mixin small{
+  @media only screen and (max-width: $size-max) {
+    @content;
+  }
+}
+
+@mixin medium{
+  @media only screen and (min-width: ($size-min + 1)) and (max-width: ($size-max - 1)) {
+    @content;
+  }
+}
+
+@mixin big{
+  @media only screen and (min-width: $size-max) {
+    @content;
+  }
+}
+
+@mixin aroundMedium{
+  @media only screen and (min-width: ($size-min + 1)) {
+    @content;
+  }
+}
+
+@mixin slideAnimation{
+  &.ng-hide{
+    transform: translate(120%, 0);
+    position: absolute;
+  }
+  &.ng-hide-add,
+  &.ng-hide-remove {
+    transition: transform $speed-quick;
+    display:block!important;
+  }
+  &.ng-hide-remove.ng-hide-remove-active{
+    transform: translate(0%, 0);
+  }
+  &.ng-hide-add.ng-hide-add-active{
+    transform: translate(-120%, 0);
+    position: absolute;
+  }
+}

@@ -1,0 +1,40 @@
+%frame{
+	width: 100%;
+	min-width: 1240px;
+}
+%frame_sp{
+	width: 100%;
+}
+
+%container{
+	$padding:20;
+	width: $size-max + $padding*2;
+	padding: 0 $padding+px;
+	margin: 0 auto;
+	position: relative;
+	@extend %clearfix;
+}
+
+%ball{
+	&:before{
+		display: block;
+		width: 7px;
+		height: 7px;
+		content: ""; 
+		position: absolute;
+		left: 5px;
+		top: 8px;
+		background: #000;
+		border-radius: 50%; 
+	}
+}
+
+%giji{
+	box-sizing: border-box;
+	display: block;
+	content: "";
+}
+
+%box_shadow{
+  box-shadow: 0 3px 0 #666;
+}
