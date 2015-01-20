@@ -5,13 +5,7 @@ slash
 */
 .slash {
     overflow: hidden;
-    background: #fff;
-    transition: opacity 1s ease;
     padding-top: 50px;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    transition: opacity 1s;
-    z-index: 2;
     &.is_hidden {
         opacity: 0;
     }
@@ -27,14 +21,15 @@ slash
         position: absolute;
         top: 0;
         left: 0;
+        backface-visibility: hidden;
         &.slash_wrap {
-            z-index: 5;
+            z-index: 3;
         }
         &.up {
-            z-index: 4;
+            z-index: 2;
         }
         &.down {
-            z-index: 3;
+            z-index: 1;
         }
     }
 }
@@ -42,25 +37,21 @@ slash
 //アニメーションのスタイル
 .slash{
     &.is_animating {
-        .slash_wrap {
-            animation: zuba1 2s ease both;
-        }
         .up {
-            animation: zuba1 2s ease both;
+            animation: slashUp1 2s ease both;
         }
         .down {
             animation: zuba2 2s ease both;
         }
     }
 }
-
 .slash_wrap {
     &.is_animating {
-        animation: zuba1 2s 2s ease both;
+        animation: slashUp1 2s 2s ease both;
     }
 }
 .slash_bg_inner {
     &.is_animating{
-        animation: pika 0.25s ease-out both;
+        animation: slashSord 0.25s ease-out both;
     }
 }

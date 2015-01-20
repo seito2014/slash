@@ -1,4 +1,4 @@
-@keyframes pika{
+@keyframes slashSord{
   0% {
     opacity: 1;
   }
@@ -10,6 +10,18 @@
   }
 }
 
+// 上半分アニメーション　その1
+@keyframes slashUp1{
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(-655px,437px,0);
+  }
+}
+
+
+// 上半分アニメーション　その2
 @keyframes zuba1{
   0% {
     transform: translate3d(0,0,0);
