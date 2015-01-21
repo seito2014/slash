@@ -15,7 +15,6 @@ var _extend = require('util')._extend,
 var DEV_PATH = 'dev';
 var PRE_PATH = 'preview';
 var RELEASE_PATH = 'release';
-var WP_PATH = '../wp/wp-content/themes/prdinternshiptheme';
 var path = {
     sp: {
         html: {
@@ -27,37 +26,31 @@ var path = {
             src: DEV_PATH + '/sass/**/*.scss',
             dest: PRE_PATH + '/css',
             preview: PRE_PATH + '/css/**/*.css',
-            release: RELEASE_PATH + '/css',
-            wp: WP_PATH + '/css'
+            release: RELEASE_PATH + '/css'
         },
         js: {
             src: DEV_PATH + '/js/**/*.js',
             dest: PRE_PATH + '/js',
             preview: PRE_PATH + '/js/**/*.js',
             src_release: RELEASE_PATH + '/js/**/*.js',
-            release: RELEASE_PATH + '/js',
-            wp: WP_PATH + '/js',
-            wp_min: WP_PATH + '/js/min'
+            release: RELEASE_PATH + '/js'
         },
         images: {
             src: DEV_PATH + '/images/**/*',
             dest: PRE_PATH + '/images',
             preview: PRE_PATH + '/images/**/*',
-            release: RELEASE_PATH + '/images',
-            wp: WP_PATH + '/images'
+            release: RELEASE_PATH + '/images'
         },
         sprite: {
             src: DEV_PATH + '/images/sprite/*',
             dest: {
                 img: PRE_PATH + '/images/sprite',
                 sass: DEV_PATH + '/sass/module'
-            },
-            wp: WP_PATH + '/images/sprite'
+            }
         },
         lib: {
             src: DEV_PATH + '/lib/**/*',
-            dest: PRE_PATH + '/lib',
-            wp: WP_PATH + '/lib'
+            dest: PRE_PATH + '/lib'
         }
     }
 };
@@ -205,28 +198,4 @@ gulp.task('default', ['html','style','js','images','copy','serv'], function () {
     return gulp.src(path.sp.html.src)
         .pipe($.usemin())
         .pipe(gulp.dest(PRE_PATH));
-});
-
-// task WordPressにも適応
-gulp.task('wp', function () {
-    // cssはそのままコピー
-    gulp.src(path.sp.sass.preview)
-        .pipe(gulp.dest(path.sp.sass.wp));
-
-    // imagesはそのままコピー
-    gulp.src(path.sp.images.preview)
-        .pipe(gulp.dest(path.sp.images.wp));
-
-    // js folder(圧縮前のデータ)
-    gulp.src(path.sp.js.preview)
-        .pipe(gulp.dest(path.sp.js.wp));
-
-    // js folder(圧縮後のデータ)
-    gulp.src(path.sp.js.src_release)
-        .pipe(gulp.dest(path.sp.js.wp_min));
-
-    // lib folder(圧縮前のデータ)
-    gulp.src(path.sp.lib.src)
-        .pipe(gulp.dest(path.sp.lib.wp));
-
 });
