@@ -9,7 +9,9 @@
 
     $(window).on('load',function(){
         //切れ目アニメーション
-        $slashInner.addClass('is_animating');
+        setTimeout(function() {
+            $slashInner.addClass('is_animating');
+        },1000);
 
         // 上半分が斬れるアニメーション
         $slashInner.on('webkitAnimationEnd',function(){
