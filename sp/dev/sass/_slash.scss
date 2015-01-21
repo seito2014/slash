@@ -1,8 +1,3 @@
-/*
-#overview
-slash
-
-*/
 .slash {
     overflow: hidden;
     padding-top: 50px;
@@ -30,50 +25,6 @@ slash
         }
         &.down {
             z-index: 1;
-        }
-    }
-}
-
-//アニメーションのスタイル
-
-//.is_animatingクラスが付いたらアニメーション作動
-
-// // 斬れるアニメーション
-// .slash_img_inner {
-//     &.is_animating{
-//         animation: slashSord 0.25s ease-out both;
-//     }
-// }
-// .slash{
-//     &.is_animating {
-//         .up {
-//             animation: slashUp1 2s ease both;
-//         }
-//         .down {
-//             animation: zuba2 2s ease both;
-//         }
-//     }
-// }
-// .slash_wrap {
-//     &.is_animating {
-//         animation: slashUp1 2s 2s ease both;
-//     }
-// }
-
-
-// 斬れ目アニメーション
-.slash_img_inner {
-    &.is_animating{
-        animation: slashSord 0.25s ease-out both;
-    }
-}
-
-// 上半分スライドするアニメーション
-.slash{
-    &.is_animating {
-        .slash_wrap,
-        .up {
-            animation: slashUp 2s ease both;
         }
     }
 }

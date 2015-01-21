@@ -1,0 +1,39 @@
+// 斬れ目アニメーション
+@keyframes slashSord{
+    0% {
+        opacity: 1;
+    }
+    20%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+// 上半分アニメーション
+@keyframes slashUp{
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(-655px,430px,0);
+    }
+}
+
+// 斬れ目アニメーション
+.slash_img_inner {
+    &.is_animating{
+        animation: slashSord 0.25s ease-out both;
+    }
+}
+
+// 上半分アニメーション
+.slash{
+    &.is_animating {
+        .slash_wrap,
+        .up {
+            animation: slashUp 2s ease both;
+        }
+    }
+}
