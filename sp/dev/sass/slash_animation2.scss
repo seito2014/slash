@@ -16,17 +16,6 @@
     0% {
         transform: translate3d(0,0,0);
     }
-    100% {
-        transform: translate3d(-655px,430px,0);
-    }
-}
-
-
-// 上半分アニメーション　その2
-@keyframes zuba1{
-    0% {
-        transform: translate3d(0,0,0);
-    }
     50%{
         transform: translate3d(-70px,46px,0);
     }
@@ -34,15 +23,15 @@
         transform: translate3d(-70px,46px,0);
     }
     100% {
-        transform: translate3d(-655px,437px,0);
+        transform: translate3d(-655px,430px,0);
     }
 }
-@keyframes zuba2{
-    50% {
+@keyframes slashDown{
+    70% {
         transform: translate3d(0,0,0);
     }
-    80% {
-        transform: translate3d(0%,-0%,0);
+    100% {
+        transform: translate3d(655px,-430px,0);
     }
 }
 
@@ -53,12 +42,16 @@
     }
 }
 
-// 上半分アニメーション
 .slash{
     &.is_animating {
+        // 上半分アニメーション
         .slash_wrap,
         .up {
             animation: slashUp 2s ease both;
+        }
+        // 下半分アニメーション
+        .down{
+            animation: slashDown 2s ease both;
         }
     }
 }
