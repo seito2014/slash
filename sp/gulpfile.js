@@ -75,15 +75,6 @@ gulp.task('html', function () {
 gulp.task('style', function () {
     gulp.src(path.sp.sass.src)
         .pipe($.plumber())
-        .pipe($.frontnote({
-            title:'STYLE GUIDE',
-            overview:'./README.md',
-            out:'./style_guide',
-            css:'../preview/css/common.css',
-            script:['./preview/lib/jquery-1.11/jquery-1.11.0.js'],
-            clean:true
-            //verbose:true
-        }))
         .pipe($.rubySass({
             style:'compressed'
         }))
